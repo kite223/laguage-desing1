@@ -51,6 +51,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .masthead h1{font-size:27px;line-height:1.25;margin:8px 0 6px;letter-spacing:-.01em}
 .sub{color:var(--ink-soft);font-size:14px}
 .idbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.idfix{display:inline-flex;align-items:center;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:3px 9px;font-size:13px}
 .idbar label{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-soft);font-weight:600;white-space:nowrap}
 
 /* 공통 입력 */
@@ -110,7 +111,7 @@ td input[type=text],td textarea{border:none;background:transparent;padding:2px;b
 td select{font-family:inherit;font-size:15px;padding:4px 6px;border:1px solid var(--line);border-radius:5px;background:var(--card);color:var(--ink)}
 td select:focus{outline:2px solid var(--accent);outline-offset:0}
 td input[type=text]:focus,td textarea:focus{outline:2px solid var(--accent);outline-offset:0}
-.rown{text-align:center;color:var(--ink-soft);font-weight:700;width:34px}
+.rown{text-align:center;color:var(--ink-soft);font-weight:700;width:48px}
 
 /* 수정본 */
 .rules{
@@ -125,6 +126,7 @@ td input[type=text]:focus,td textarea:focus{outline:2px solid var(--accent);outl
 .rev th{width:92px;text-align:center;font-size:14px;color:var(--accent);background:var(--accent-soft)}
 .rev th.wide{width:auto;text-align:left;color:var(--ink-soft)}
 .rev tr.sec th{color:var(--ink-soft);background:var(--paper);font-size:12.5px}
+.dg th.dgl{width:88px;text-align:center;font-size:13px;color:var(--accent);background:var(--accent-soft)}
 .rev tr.sec td input[type=text]{font-weight:700}
 .rev td textarea{min-height:46px;font-size:15px;line-height:1.65;width:100%}
 .rev td input[type=text]{font-size:15px;width:100%}
@@ -165,6 +167,7 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
 .rp-k{font-size:11.5px;color:#8a8a8a;margin-top:7px;letter-spacing:.3px}
 .rp-v{font-size:14.5px;line-height:1.7;white-space:pre-wrap;color:#1a1a1a}
 .rp-best{border:1px solid var(--accent);background:var(--accent-soft);border-radius:8px;padding:12px 14px;margin:12px 0 4px}
+.rp-badge.alt{background:var(--paper);color:var(--accent);border:1px solid var(--accent)}
 .rp-best b{font-size:13px;color:var(--accent)}
 .rp-dl{margin:0}
 .rp-dl dt{font-weight:700;font-size:14.5px;margin-top:9px;color:#161616}
@@ -178,6 +181,33 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
 .check input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--accent)}
 .check span b{color:var(--accent);font-weight:700}
 .check .eln{display:inline-block;font-style:normal;font-size:11.5px;color:var(--ink-soft);margin-left:7px;white-space:nowrap}
+.wallnote{margin-top:8px;font-size:13px;line-height:1.65;color:var(--ink-soft);background:var(--paper);border-radius:6px;padding:9px 11px}
+.wallnote.on{color:var(--ink);background:var(--accent-soft)}
+.wallnote .wb{display:block;margin-bottom:7px;padding-bottom:7px;border-bottom:1px solid rgba(0,0,0,.09);color:var(--ink)}
+.doneb{display:flex;flex-direction:column;gap:3px}
+.doneb label{display:flex;gap:5px;align-items:flex-start;font-size:11.5px;line-height:1.35;color:var(--ink-soft);cursor:pointer}
+.doneb input{margin:1px 0 0;flex:none;width:13px;height:13px;accent-color:var(--accent)}
+.doneb label.on{color:var(--accent);font-weight:700}
+.doneb .dsep{display:block;height:1px;background:var(--line);margin:4px 2px 4px 0}
+.doneb label.lx span{opacity:.82}
+.kindsel{font-size:12.5px;padding:5px 4px}
+.kindwarn{margin:7px 0 0;font-size:12.5px;font-weight:700;color:#a4442f}
+.kindwarn.ok{color:var(--accent)}
+.tiny{font-size:11.5px;color:var(--ink-soft)}
+.memo{margin:18px 0 0;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.memo label{display:block;font-size:13.5px;font-weight:700;color:var(--accent);margin-bottom:7px}
+.memo input{width:100%}
+.memo .hint{margin:7px 0 0}
+.minnote{font-size:12.5px;color:var(--ink-soft);margin:0 0 7px;line-height:1.55}
+.minnote b{color:var(--accent)}
+tr.opt td{background:var(--paper)}
+tr.opt input, tr.opt textarea{background:transparent;color:var(--ink-soft)}
+tr.opt td.rown{color:var(--ink-soft)}
+.optm{display:block;font-size:10px;font-weight:700;color:var(--accent);opacity:.78;margin-top:3px;white-space:nowrap}
+.rev th.done{width:168px;text-align:center;color:var(--ink-soft);background:var(--paper);font-size:12.5px}
+.rev td.done{background:#fcfdfd}
+.dg th{text-align:center;font-size:12.5px;color:var(--accent);background:var(--accent-soft);white-space:nowrap}
+.wallnote b{color:var(--accent)}
 
 /* 삽화 */
 .ill-grid{display:grid;gap:14px}
@@ -268,7 +298,8 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
     <h1>알기 쉬운 언어 설계 프로젝트</h1>
     <p class="sub">독자를 정하고, 학교가 보낸 안내문을 그 사람이 혼자 읽을 수 있게 고쳐 씁니다.</p>
     <div class="idbar noprint-keep">
-      <label>학년·반 <input type="text" id="id-class" maxlength="10"></label>
+      <span class="idfix">2학년</span>
+      <label>반 <input type="text" id="id-class" maxlength="3" style="width:48px" inputmode="numeric"></label>
       <label>번호 <input type="text" id="id-no" maxlength="6"></label>
       <label>이름 <input type="text" id="id-name" maxlength="12"></label>
     </div>
@@ -279,9 +310,10 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
     <h2>과제 상황</h2>
     <dl>
       <dt>나의 역할</dt><dd>우리 학교 ‘쉬운 정보 개발팀’의 언어 설계 담당자</dd>
-      <dt>상황</dt><dd>학교가 보낸 안내문이 너무 어려워 무엇을 해야 할지 모르겠다는 의견이 들어왔습니다. 「국어기본법」 제14조는 공공기관이 공문서를 <b>일반 국민이 알기 쉬운 용어와 문장</b>으로 써야 한다고 정하고 있습니다.</dd>
+      <dt>상황</dt><dd>학교가 보낸 안내문이 너무 어려워 무엇을 해야 할지 모르겠다는 의견이 들어왔습니다. 「국어기본법」 제14조(공문서등의 작성·평가)는 공공기관등이 공문서등을 <b>일반 국민이 알기 쉬운 용어와 문장</b>으로 써야 한다고 정하고 있습니다.</dd>
       <dt>할 일</dt><dd>오늘 받은 원자료를 내가 정한 독자 한 사람이 스스로 읽고 이해할 수 있도록 <b>한 번에 고쳐 씁니다.</b> 왜 그렇게 고쳤는지를 설명하는 보고서는 다음 시간에 씁니다.</dd>
       <dt>오늘 마칠 것</dt><dd>독자 정하기 → 진단 → 수정본 → 삽화 계획. 수업이 끝나기 전에 PDF로 저장해 <b>1차 제출함</b>에 냅니다.</dd>
+      <dt>전달 방식</dt><dd>이 안내문은 종이로도 나가고, 담임 선생님이 <b>전화로 읽어 드리기도</b> 합니다. 그래서 눈으로 읽는 사람과 <b>소리로 듣는 사람</b>이 모두 있습니다.</dd>
       <dt>유의</dt><dd>이 평가는 친구나 선생님의 피드백을 받아 다시 고치는 과정이 없습니다. 연습 시간에 익힌 것을 바탕으로 작성하세요.</dd>
     </dl>
     <div class="quest"><b>오늘의 질문</b> &nbsp;좋은 글의 기준은 무엇에 따라 달라지는가?</div>
@@ -306,13 +338,21 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
 
   <section>
     <div class="step-head"><span class="num">1단계</span><h2>독자 정하기</h2></div>
-    <p class="hint">누가 읽을 글인지 정해야 무엇을 고칠지 정해집니다. 한 사람을 구체적으로 떠올리되, <b>그 사람이 누구인지 알아볼 수 있는 내용은 쓰지 않습니다.</b> 이름, 사는 곳, 가족 관계는 적지 말고 <b>읽기 특성만</b> 적으세요.</p>
+    <p class="hint">누가 읽을 글인지 정해야 무엇을 고칠지 정해집니다. 한 사람을 구체적으로 떠올리되, <b>그 사람이 누구인지 알아볼 수 있는 내용은 쓰지 않습니다.</b> 이름, 사는 곳, 가족 관계는 적지 말고 <b>읽기 특성만</b> 적으세요.<br>여기서 고른 <b>막히는 곳</b>은 <b>열 가지를 모두 하되 어디에 한 걸음 더 들어갈지</b>를 정합니다. 수정본 전체에서 드러나는지는 요소 ⑨가, 「내 독자 때문에 가장 공들인 한 곳」은 요소 ④가 봅니다.</p>
     <div class="tw">
       <table>
         <tr><th style="width:150px">내가 정한 독자</th>
           <td><input type="text" id="r-who" placeholder="예) 초등학교 3학년 동생 / 한국어를 배우기 시작한 지 1년쯤 된 사람 / 긴 글을 읽으면 금방 지치는 어르신"></td></tr>
+        <tr><th>이 독자가 가장 먼저<br>막히는 곳</th>
+          <td><select id="r-wall">
+              <option value="">— 하나만 고르세요 —</option>
+              <option value="단어 수준">단어 수준 — 아는 글자인데 무슨 뜻인지 모르는 말이 많다</option>
+              <option value="문장 수준">문장 수준 — 말은 알지만 한 문장이 길면 끝까지 못 읽는다</option>
+              <option value="글 전체 수준">글 전체 수준 — 글이 빽빽하면 어디부터 읽어야 할지 모르겠다</option>
+            </select>
+            <div class="wallnote" id="wall-note"></div></td></tr>
         <tr><th>이 독자의 읽기 특성</th>
-          <td><textarea id="r-trait" rows="3" placeholder="어떤 글은 읽을 수 있고 어떤 글에서 막히는지 씁니다. 예) 짧은 문장은 읽지만 한자어가 나오면 멈춘다. 한 문장에 내용이 두 개 이상 들어 있으면 끝까지 읽지 못한다."></textarea></td></tr>
+          <td><textarea id="r-trait" rows="3" placeholder="위에서 고른 막힘을 더 자세히 씁니다. 어떤 글은 읽을 수 있고 어떤 글에서 멈추는지. 예) 짧은 문장은 읽지만 한자어가 나오면 멈춘다. 한 문장에 내용이 두 개 이상 들어 있으면 끝까지 읽지 못한다."></textarea></td></tr>
         <tr><th>이 독자가 이 글에서<br>꼭 알아야 할 것</th>
           <td><textarea id="r-need" rows="2" placeholder="원자료의 내용 중 이 독자에게 가장 중요한 정보 두세 가지"></textarea></td></tr>
         <tr><th>이 독자를 고른 이유</th>
@@ -324,14 +364,15 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
 
   <section>
     <div class="step-head"><span class="num">2단계</span><h2>원자료 진단하기</h2></div>
-    <p class="hint">내 독자가 걸려 넘어질 곳을 찾습니다. ‘어려운 이유’는 느낌이 아니라 <b>문법 개념어</b>로 쓰세요. (명사화, 피동 표현, 이어진문장, 안은문장, 전문 용어, 일상에서 잘 쓰지 않는 말 등)</p>
+    <p class="hint">내 독자가 걸려 넘어질 곳을 <b>영역별로</b> 찾습니다. ‘어려운 이유’는 느낌이 아니라 <b>문법 개념어</b>로 쓰세요. <b>다섯 행을 모두</b> 채웁니다 — 문장 구조 세 행, 어휘 두 행. 여기서 찾은 다섯 곳이 3단계에서 고칠 곳이 되고, 다음 시간 보고서의 문장 설계 세 행·어휘 설계 두 행으로 그대로 이어집니다.</p>
     <div class="tw">
-      <table>
-        <tr><th class="rown">#</th><th style="width:70px">문장 번호</th><th style="width:34%">걸리는 표현 그대로 옮기기</th><th>왜 어려운가 (문법 개념어 사용)</th></tr>
-        <tr><td class="rown">1</td><td><input type="text" id="d1a"></td><td><input type="text" id="d1b"></td><td><input type="text" id="d1c"></td></tr>
-        <tr><td class="rown">2</td><td><input type="text" id="d2a"></td><td><input type="text" id="d2b"></td><td><input type="text" id="d2c"></td></tr>
-        <tr><td class="rown">3</td><td><input type="text" id="d3a"></td><td><input type="text" id="d3b"></td><td><input type="text" id="d3c"></td></tr>
-        <tr><td class="rown">4</td><td><input type="text" id="d4a"></td><td><input type="text" id="d4b"></td><td><input type="text" id="d4c"></td></tr>
+      <table class="dg">
+        <tr><th style="width:88px">영역</th><th style="width:74px">문장 번호</th><th style="width:33%">걸리는 표현 그대로 옮기기</th><th>왜 어려운가 (문법 개념어 사용)</th></tr>
+        <tr><th class="dgl">문장 구조</th><td><input type="text" id="d1a" style="text-align:center"></td><td><input type="text" id="d1b"></td><td><input type="text" id="d1c" placeholder="명사화 · 피동 · 이어진문장 · 안은문장 가운데"></td></tr>
+        <tr><th class="dgl">문장 구조</th><td><input type="text" id="d2a" style="text-align:center"></td><td><input type="text" id="d2b"></td><td><input type="text" id="d2c"></td></tr>
+        <tr><th class="dgl">문장 구조</th><td><input type="text" id="d3a" style="text-align:center"></td><td><input type="text" id="d3b"></td><td><input type="text" id="d3c"></td></tr>
+        <tr><th class="dgl">어휘</th><td><input type="text" id="d4a" style="text-align:center"></td><td><input type="text" id="d4b"></td><td><input type="text" id="d4c" placeholder="전문 용어 · 일상에서 잘 쓰지 않는 말"></td></tr>
+        <tr><th class="dgl">어휘</th><td><input type="text" id="d5a" style="text-align:center"></td><td><input type="text" id="d5b"></td><td><input type="text" id="d5c"></td></tr>
       </table>
     </div>
   </section>
@@ -340,13 +381,9 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
   <section>
     <div class="step-head"><span class="num">3단계</span><h2>수정본 쓰기</h2></div>
     <div class="rules">
-      <strong>고쳐 쓸 때 지킬 것</strong>
+      <strong>칸마다 무엇을 했는지는 표 오른쪽 「이 칸에서 한 일」에 표시합니다. 그 밖에 글 전체에서 지킬 것은 두 가지입니다.</strong>
       <ul>
-        <li>한 문장에 서술어 하나. 내용이 둘이면 문장을 나눈다.</li>
-        <li>‘~의 제출이 요구됩니다’ 같은 명사 표현을 ‘~을 내야 합니다’처럼 동사로 바꾼다.</li>
-        <li>‘실시됩니다’ 같은 피동 표현은 누가 하는지 드러나게 바꾼다.</li>
         <li>독자를 ‘나’ 또는 ‘여러분’으로 부르고, 해야 할 일을 분명히 적는다.</li>
-        <li>꼭 필요한 용어는 바꾸지 말고 남긴 뒤 단어 사전에서 풀이한다.</li>
         <li>원자료에 있던 중요한 정보를 빠뜨리거나 다르게 바꾸지 않는다.</li>
       </ul>
     </div>
@@ -356,7 +393,10 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       <input type="text" class="rev-in" id="rv-title" data-label="제목" placeholder="내 독자가 보고 ‘나에게 온 글이구나’ 하고 알아볼 수 있는 제목">
     </div>
 
-    <p class="hint">원자료의 문장 번호에 맞추어 칸이 나뉘어 있습니다. <b>한 문장을 두세 문장으로 나누어 썼다면 그 칸 안에 모두 쓰세요.</b> 칸을 비우면 그 내용은 빠진 것으로 봅니다. 소제목 칸은 내용을 묶어 주는 자리입니다.</p>
+    <p class="hint">원자료의 문장 번호에 맞추어 칸이 나뉘어 있습니다. <b>한 문장을 두세 문장으로 나누어 썼다면 그 칸 안에 모두 쓰세요.</b> 소제목 칸은 내용을 묶어 주는 자리입니다.<br>칸을 고쳐 쓴 뒤 <b>오른쪽 「이 칸에서 한 일」</b>에 표시하세요. <b>표시한 것이 그 칸의 글에 실제로 드러나야 합니다.</b> 거의 그대로 둔 칸은 표시하지 않아도 됩니다.</p>
+    <div class="rules"><strong>「이 칸에서 한 일」 — 네 가지가 무엇을 뜻하는지</strong><ul><li><b>문장 나눔</b> — 한 문장에 내용이 둘 이상이면 두세 문장으로 가른다. <span class="tiny">(1차시 ‘한 문장에 서술어 하나’)</span></li><li><b>피동→능동</b> — ‘실시됩니다’처럼 누가 하는지 숨은 말을 ‘학교가 실시합니다’로 되돌린다. <span class="tiny">(2차시 ① ‘누가 하는지도 넣습니다’)</span></li><li><b>명사→동사</b> — ‘제출이 요구됩니다’처럼 동작을 명사로 굳힌 말을 ‘내야 합니다’로 푼다. <span class="tiny">(2차시 ① 명사에 갇힌 동작)</span></li><li><b>말 바꿈</b> — 어려운 말을 쉬운 말로 갈아 끼운다. <span class="tiny">(2차시 ② 바꿀 말)</span></li></ul>
+      <p style="margin:8px 0 0;font-size:12.5px;color:var(--ink-soft)">※ 꼭 필요한 용어는 바꾸지 말고 그대로 두세요. 그 풀이는 <b>다음 시간 단어 사전</b>에서 씁니다. (2차시 ③ 남길 말 — 여기서 표시하는 항목은 아닙니다.)</p></div>
+    <p class="hint"><b>갖춰야 할 것</b> — 윗줄 세 가지(문장)를 표시한 칸이 <b>세 곳 이상</b>이고 그 안에 <b>서로 다른 두 가지 이상</b>, 그리고 아랫줄 <b>말 바꿈이 한 곳 이상</b>. 표 위에 지금 상태가 뜹니다.<br>내 독자에게 필요 없다고 판단해 <b>뺀 칸</b>이 있으면 그 칸에 <b>「뺌 — 왜 뺐는지」</b>라고 적으세요. 그냥 비워 두면 누락으로 봅니다. 다만 <b>꼭 알아야 할 정보가 든 칸은 뺄 수 없습니다.</b></p>
 
     <div class="illbar noprint">
       <span class="lab">삽화 자리 표시</span>
@@ -364,23 +404,24 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       <button type="button" class="tbtn" data-mark="2">[삽화2] 넣을 자리</button>
       <span class="st" id="mark-st">넣고 싶은 칸을 먼저 누른 뒤, 단추를 누르세요.</span>
     </div>
+    <div class="illbar noprint" style="margin-top:8px"><span class="lab">이 칸에서 한 일</span><span class="st" id="done-st">아직 표시한 칸이 없습니다. 고쳐 쓴 칸마다 한 일을 표시하세요.</span></div>
 
     <div class="tw">
       <table class="rev">
-        <colgroup><col style="width:92px"><col></colgroup>
-        <tr><th>원자료</th><th class="wide">내가 고쳐 쓴 글</th></tr>
-        <tr><th>①</th><td><textarea class="rev-in" id="rv1" data-label="①번 칸" rows="2" placeholder="원자료 ①번 문장을 내 독자가 읽을 수 있게 고쳐 씁니다."></textarea></td></tr>
-        <tr><th>②</th><td><textarea class="rev-in" id="rv2" data-label="②번 칸" rows="2"></textarea></td></tr>
-        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh1" data-label="소제목 1" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td></tr>
-        <tr><th>③</th><td><textarea class="rev-in" id="rv3" data-label="③번 칸" rows="2"></textarea></td></tr>
-        <tr><th>④</th><td><textarea class="rev-in" id="rv4" data-label="④번 칸" rows="2"></textarea></td></tr>
-        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh2" data-label="소제목 2" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td></tr>
-        <tr><th>⑤</th><td><textarea class="rev-in" id="rv5" data-label="⑤번 칸" rows="2"></textarea></td></tr>
-        <tr><th>⑥</th><td><textarea class="rev-in" id="rv6" data-label="⑥번 칸" rows="2"></textarea></td></tr>
-        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh3" data-label="소제목 3" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td></tr>
-        <tr><th>⑦</th><td><textarea class="rev-in" id="rv7" data-label="⑦번 칸" rows="2"></textarea></td></tr>
-        <tr><th>⑧</th><td><textarea class="rev-in" id="rv8" data-label="⑧번 칸" rows="2"></textarea></td></tr>
-        <tr><th>⑨</th><td><textarea class="rev-in" id="rv9" data-label="⑨번 칸" rows="2"></textarea></td></tr>
+        <colgroup><col style="width:72px"><col><col style="width:168px"></colgroup>
+        <tr><th>원자료</th><th class="wide">내가 고쳐 쓴 글</th><th class="done">이 칸에서 한 일<br><span style="font-weight:400;font-size:11px">(해당하는 것 모두)</span></th></tr>
+        <tr><th>①</th><td><textarea class="rev-in" id="rv1" data-label="①번 칸" rows="2" placeholder="원자료 ①번 문장을 내 독자가 읽을 수 있게 고쳐 씁니다."></textarea></td><td class="done"><div class="doneb"><label for="t1a"><input type="checkbox" id="t1a"><span>문장 나눔</span></label><label for="t1b"><input type="checkbox" id="t1b"><span>피동→능동</span></label><label for="t1c"><input type="checkbox" id="t1c"><span>명사→동사</span></label><span class="dsep"></span><label for="t1d" class="lx"><input type="checkbox" id="t1d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>②</th><td><textarea class="rev-in" id="rv2" data-label="②번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t2a"><input type="checkbox" id="t2a"><span>문장 나눔</span></label><label for="t2b"><input type="checkbox" id="t2b"><span>피동→능동</span></label><label for="t2c"><input type="checkbox" id="t2c"><span>명사→동사</span></label><span class="dsep"></span><label for="t2d" class="lx"><input type="checkbox" id="t2d"><span>말 바꿈</span></label></div></td></tr>
+        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh1" data-label="소제목 1" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
+        <tr><th>③</th><td><textarea class="rev-in" id="rv3" data-label="③번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t3a"><input type="checkbox" id="t3a"><span>문장 나눔</span></label><label for="t3b"><input type="checkbox" id="t3b"><span>피동→능동</span></label><label for="t3c"><input type="checkbox" id="t3c"><span>명사→동사</span></label><span class="dsep"></span><label for="t3d" class="lx"><input type="checkbox" id="t3d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>④</th><td><textarea class="rev-in" id="rv4" data-label="④번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t4a"><input type="checkbox" id="t4a"><span>문장 나눔</span></label><label for="t4b"><input type="checkbox" id="t4b"><span>피동→능동</span></label><label for="t4c"><input type="checkbox" id="t4c"><span>명사→동사</span></label><span class="dsep"></span><label for="t4d" class="lx"><input type="checkbox" id="t4d"><span>말 바꿈</span></label></div></td></tr>
+        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh2" data-label="소제목 2" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
+        <tr><th>⑤</th><td><textarea class="rev-in" id="rv5" data-label="⑤번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t5a"><input type="checkbox" id="t5a"><span>문장 나눔</span></label><label for="t5b"><input type="checkbox" id="t5b"><span>피동→능동</span></label><label for="t5c"><input type="checkbox" id="t5c"><span>명사→동사</span></label><span class="dsep"></span><label for="t5d" class="lx"><input type="checkbox" id="t5d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>⑥</th><td><textarea class="rev-in" id="rv6" data-label="⑥번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t6a"><input type="checkbox" id="t6a"><span>문장 나눔</span></label><label for="t6b"><input type="checkbox" id="t6b"><span>피동→능동</span></label><label for="t6c"><input type="checkbox" id="t6c"><span>명사→동사</span></label><span class="dsep"></span><label for="t6d" class="lx"><input type="checkbox" id="t6d"><span>말 바꿈</span></label></div></td></tr>
+        <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh3" data-label="소제목 3" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
+        <tr><th>⑦</th><td><textarea class="rev-in" id="rv7" data-label="⑦번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t7a"><input type="checkbox" id="t7a"><span>문장 나눔</span></label><label for="t7b"><input type="checkbox" id="t7b"><span>피동→능동</span></label><label for="t7c"><input type="checkbox" id="t7c"><span>명사→동사</span></label><span class="dsep"></span><label for="t7d" class="lx"><input type="checkbox" id="t7d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>⑧</th><td><textarea class="rev-in" id="rv8" data-label="⑧번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t8a"><input type="checkbox" id="t8a"><span>문장 나눔</span></label><label for="t8b"><input type="checkbox" id="t8b"><span>피동→능동</span></label><label for="t8c"><input type="checkbox" id="t8c"><span>명사→동사</span></label><span class="dsep"></span><label for="t8d" class="lx"><input type="checkbox" id="t8d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>⑨</th><td><textarea class="rev-in" id="rv9" data-label="⑨번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t9a"><input type="checkbox" id="t9a"><span>문장 나눔</span></label><label for="t9b"><input type="checkbox" id="t9b"><span>피동→능동</span></label><label for="t9c"><input type="checkbox" id="t9c"><span>명사→동사</span></label><span class="dsep"></span><label for="t9d" class="lx"><input type="checkbox" id="t9d"><span>말 바꿈</span></label></div></td></tr>
       </table>
     </div>
   </section>
@@ -435,6 +476,12 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
         </div>
       </div>
 
+    </div>
+
+    <div class="memo">
+      <label for="memo3">다음 시간에 쓸 거리 — 내 독자를 위해 <b>더 하고 싶은 것</b></label>
+      <input type="text" id="memo3" placeholder="글자를 크게 하거나 중요한 곳이 눈에 띄게 하고 싶었다 · 전화번호와 날짜를 따로 떼어 크게 보여 주고 싶었다 · 표나 순서 번호로 정리하고 싶었다 · 종이 말고 문자나 음성으로도 보내면 좋겠다 · 내가 직접 읽어 드리면 좋겠다">
+      <p class="hint">문법으로 설명되지 않아도 좋습니다. 내 독자를 생각하다 떠오른 것을 한 줄로 적어 두세요. 다음 시간 보고서에서 이어 씁니다. <b>비워 두어도 됩니다.</b></p>
     </div>
   </section>
 
@@ -671,6 +718,100 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
     b.addEventListener('click', function(){ placeMark(b.getAttribute('data-mark')); });
   });
 
+  /* ── 막히는 곳에 따른 안내 ── */
+  var WALL = {
+    '단어 수준': '<b>단어 수준에서 막히는 독자</b>입니다. 문장도 구성도 <b>똑같이</b> 고쳐야 합니다. 다만 <b>어휘와 단어 사전에서 한 걸음 더</b> 들어가세요. 어려운 말을 그냥 지우지 말고 바꿀지 남기고 풀이할지를 하나하나 정하고, 그 판단의 근거를 보고서에 쓰세요. 소리로 듣는 사람을 위한 발음 안내도 특히 중요합니다.',
+    '문장 수준': '<b>문장 수준에서 막히는 독자</b>입니다. 어휘도 구성도 <b>똑같이</b> 고쳐야 합니다. 다만 <b>문장에서 한 걸음 더</b> 들어가세요. 한 문장에 한 가지만 담고, 원자료에서 뒤집혀 있는 순서를 해야 할 순서대로 되돌리세요. 수정본의 문장 수가 원자료보다 늘어날 것입니다.',
+    '글 전체 수준': '<b>글 전체 수준에서 막히는 독자</b>입니다. 어휘도 문장도 <b>똑같이</b> 고쳐야 합니다. 다만 <b>구성에서 한 걸음 더</b> 들어가세요. 소제목으로 뼈대를 세우고, 꼭 알아야 할 정보가 아니면 빼도 됩니다. 뺀 칸에는 「뺌 — 왜 뺐는지」라고 적습니다. 삽화와 번호로 읽는 길을 만들어 주세요.',
+  };
+  var WALL_BASE = '평가 요소 열 가지는 <b>모두</b> 해야 합니다. 여기서 고른 것은 \'무엇을 하느냐\'가 아니라 <b>\'어디에 한 걸음 더 들어가느냐\'</b>를 정합니다.';
+  function paintWall(){
+    var sel = document.getElementById('r-wall') || document.getElementById('k-wall');
+    var note = document.getElementById('wall-note');
+    if (!sel || !note) return;
+    var v = sel.value;
+    if (WALL[v]) { note.innerHTML = '<span class="wb">' + WALL_BASE + '</span>' + WALL[v]; note.className = 'wallnote on'; }
+    else { note.innerHTML = '<span class="wb">' + WALL_BASE + '</span>고르면 어디에 한 걸음 더 들어가야 하는지 알려 줍니다.'; note.className = 'wallnote'; }
+  }
+  (function(){
+    var sel = document.getElementById('r-wall') || document.getElementById('k-wall');
+    if (sel) sel.addEventListener('change', paintWall);
+  })();
+
+  /* ── 「이 칸에서 한 일」 ── */
+  var doneBoxes = Array.prototype.slice.call(document.querySelectorAll('.doneb input[type=checkbox]'));
+  var SENTK = ['a','b','c'], LEXK = ['d'], LEXNAME = {d:'말 바꿈'}, ALLK = ['a','b','c','d'];
+  function doneStat(){
+    var n = 0, sent = 0, kinds = [], lex = {};
+    for (var i = 1; i <= 9; i++) {
+      var any = false, isSent = false;
+      ALLK.forEach(function(k){
+        var el = document.getElementById('t' + i + k);
+        if (!el || !el.checked) return;
+        any = true;
+        if (SENTK.indexOf(k) !== -1) { isSent = true; if (kinds.indexOf(k) === -1) kinds.push(k); }
+        else lex[k] = (lex[k] || 0) + 1;
+      });
+      if (any) n++;
+      if (isSent) sent++;
+    }
+    return { rows: n, sent: sent, kinds: kinds.length, lex: lex };
+  }
+  function doneRows(){ return doneStat().rows; }
+  function paintDone(){
+    doneBoxes.forEach(function(el){
+      var lab = el.closest ? el.closest('label') : el.parentNode;
+      if (lab) lab.classList.toggle('on', el.checked);
+    });
+    var st = document.getElementById('done-st');
+    if (st) {
+      var d = doneStat(), need = [];
+      if (d.sent < 3) need.push('문장 칸 ' + d.sent + '/3');
+      if (d.kinds < 2) need.push('문장 종류 ' + d.kinds + '/2');
+      LEXK.forEach(function(k){ if (!d.lex[k]) need.push(LEXNAME[k] + ' 없음'); });
+      if (d.rows === 0) { st.textContent = '아직 표시한 칸이 없습니다. 고쳐 쓴 칸마다 한 일을 표시하세요.'; st.className = 'st'; }
+      else if (need.length) { st.textContent = '아직 모자랍니다 — ' + need.join(' · ') + '. (문장 칸 3곳 · 서로 다른 종류 2가지 · 말 바꿈 1곳)'; st.className = 'st'; }
+      else { st.textContent = '문장 칸 ' + d.sent + '곳 · 서로 다른 ' + d.kinds + '가지 · 말 바꿈 ✓ — 모두 갖췄습니다.'; st.className = 'st ok'; }
+    }
+  }
+  doneBoxes.forEach(function(el){ el.addEventListener('change', paintDone); });
+
+  /* ── 문장 설계: 두 행이 같은 종류인지 ── */
+  function kindVals(){
+    var v = [];
+    for (var i = 1; i <= 3; i++) { var t = val('s' + i + 'k'); if (t) v.push(t); }
+    return v;
+  }
+  function kindDistinct(){
+    var v = kindVals(), u = [];
+    v.forEach(function(x){ if (u.indexOf(x) === -1) u.push(x); });
+    return u.length;
+  }
+  function paintKind(){
+    var el = document.getElementById('kind-st');
+    if (!el) return;
+    var v = kindVals(), d = kindDistinct();
+    if (!v.length) { el.style.display = 'none'; return; }
+    el.style.display = 'block';
+    if (v.length >= 2 && d < v.length) {
+      el.className = 'kindwarn';
+      el.textContent = '같은 종류를 두 번 골랐습니다. 서로 다른 종류를 고르세요. 같은 종류끼리는 한 행으로 셉니다.';
+    } else if (v.length < 3) {
+      el.className = 'kindwarn';
+      el.textContent = '세 행 모두 채워야 합니다. 지금 ' + v.length + '행입니다.';
+    } else if (d < 2) {
+      el.className = 'kindwarn';
+      el.textContent = '서로 다른 종류가 두 가지 이상이어야 합니다. 지금 ' + d + '가지입니다.';
+    } else {
+      el.className = 'kindwarn ok';
+      el.textContent = '세 행 · 서로 다른 종류 ' + d + '가지 — 좋습니다.';
+    }
+  }
+  ['s1k','s2k','s3k'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', paintKind);
+  });
+
   /* ── 미리보기 ── */
   function val(id){ var el = document.getElementById(id); return el ? String(el.value || '').trim() : ''; }
   function esc(x){ return String(x == null ? '' : x).replace(/[&<>]/g, function(c){
@@ -698,7 +839,7 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
   }
   function who(){
     var a = val('id-class'), b = val('id-no'), c = val('id-name');
-    return [a, b, c].filter(Boolean).join('  ');
+    return ['2학년' + (a ? ' ' + a + '반' : ''), b ? b + '번' : '', c].filter(Boolean).join('  ');
   }
 
   var NOTICE_PLAN = [['rv', 1], ['rv', 2], ['rh', 1], ['rv', 3], ['rv', 4], ['rh', 2],
@@ -706,7 +847,7 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
   var NUM = ['', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨'];
 
   function buildNotice(){
-    var code = val('src-code'), title = val('rv-title'), out = '', body = '', empty = [];
+    var code = val('src-code'), title = val('rv-title'), out = '', body = '', empty = [], dropped = [];
     out += '<div class="nt-head">원자료 ' + (code ? esc(code) : '—') + '&nbsp;&nbsp;·&nbsp;&nbsp;' + esc(who() || '이름을 적어 주세요') + '</div>';
     out += '<h1 class="nt-title">' + (title ? esc(title) : '<span class="nt-empty">제목을 아직 쓰지 않았습니다</span>') + '</h1>';
     out += '<hr class="nt-rule">';
@@ -714,11 +855,12 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       var v = val(it[0] + it[1]);
       if (it[0] === 'rh') { if (v) body += '<div class="nt-sec">' + esc(v) + '</div>'; return; }
       if (!v) { empty.push(NUM[it[1]]); return; }
+      if (/^뺌/.test(v)) { dropped.push(NUM[it[1]]); return; }
       body += para(v);
     });
     out += body || '<p class="nt-empty">아직 쓴 내용이 없습니다. 3단계 칸을 채우면 여기에 나타납니다.</p>';
     out += '<div class="nt-sign">○ ○ 고 등 학 교 장</div>';
-    return { html: out, empty: empty };
+    return { html: out, empty: empty, dropped: dropped, stat: doneStat() };
   }
 
   function rowsOf(prefix, keys){
@@ -736,17 +878,16 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
     out += '<div class="rp-meta"><b>내 독자</b> — ' + (val('k-who') ? esc(val('k-who')) : '<span class="nt-empty">아직 적지 않았습니다</span>') + '</div>';
 
     out += '<div class="rp-h">① 문장 설계 — 고치고 나서 무엇이 달라졌는가</div>';
-    var s1 = rowsOf('s', ['n', 'a', 'c']);
+    var s1 = rowsOf('s', ['n', 'k', 'a', 'c']);
     if (!s1.length) { out += '<p class="nt-empty">아직 쓴 내용이 없습니다.</p>'; empty.push('문장 설계'); }
-    else if (s1.length < 2) empty.push('문장 설계(2행 이상 필요, 지금 1행)');
+    else if (s1.length < 3) empty.push('문장 설계(3행 모두 필요, 지금 ' + s1.length + '행)');
+    if (s1.length && kindDistinct() < 2) empty.push('문장 설계(서로 다른 종류 2가지 필요)');
     s1.forEach(function(r){
-      out += '<div class="rp-row"><span class="rp-badge">' + (r[0] ? esc(r[0]) + '번 칸' : '칸 번호 없음') + '</span>'
-           + '<div class="rp-k">무엇을 어떻게 바꿨는가</div><div class="rp-v">' + (esc(r[1]) || '—') + '</div>'
-           + '<div class="rp-k">무엇이 달라지는가</div><div class="rp-v">' + (esc(r[2]) || '—') + '</div></div>';
+      out += '<div class="rp-row"><span class="rp-badge">' + (r[0] ? esc(r[0]) + '번 칸' : '칸 번호 없음')
+           + (r[1] ? '</span><span class="rp-badge alt">' + esc(r[1]) : '') + '</span>'
+           + '<div class="rp-k">무엇을 어떻게 바꿨는가</div><div class="rp-v">' + (esc(r[2]) || '—') + '</div>'
+           + '<div class="rp-k">무엇이 달라지는가</div><div class="rp-v">' + (esc(r[3]) || '—') + '</div></div>';
     });
-    var best = val('s-best');
-    if (best) out += '<div class="rp-best"><b>가장 공들여 고친 한 곳</b><div class="rp-v">' + esc(best) + '</div></div>';
-    else empty.push('가장 공들여 고친 한 곳');
 
     out += '<div class="rp-h">② 어휘 설계 — 바꾼 말과 그 근거</div>';
     var w = rowsOf('w', ['a', 'b', 'c']);
@@ -779,8 +920,17 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       out += '</dl>';
     }
 
+    out += '<div class="rp-h">⑤ 마무리 — 네 가지를 통틀어</div>';
+    var best = val('s-best');
+    if (best) out += '<div class="rp-best"><b>내 독자 때문에 가장 공들인 한 곳</b><div class="rp-v">' + esc(best) + '</div></div>';
+    else { out += '<p class="nt-empty">아직 쓰지 않았습니다.</p>'; empty.push('가장 공들인 한 곳'); }
+
+    var addon = val('addon');
+    if (addon) out += '<div class="rp-h">덧붙임 — 내 독자를 위해 더 하고 싶었던 것</div><p class="nt-p">' + esc(addon) + '</p>';
+
     var rf = val('reflect');
     if (rf) out += '<div class="rp-h">성찰 — 좋은 글의 기준은 무엇에 따라 달라지는가</div><p class="nt-p">' + esc(rf) + '</p>';
+
     return { html: out, empty: empty };
   }
 
@@ -793,13 +943,25 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
     var w = document.getElementById('pv-warn');
     if (w) {
       w.style.display = 'block';
+      var drop = (r.dropped && r.dropped.length)
+        ? '  일부러 뺀 칸 — ' + r.dropped.join(', ') + '.' : '';
+      var sNeed = [];
+      if (r.stat) {
+        if (r.stat.sent < 3) sNeed.push('문장 칸 ' + r.stat.sent + '/3');
+        if (r.stat.kinds < 2) sNeed.push('문장 종류 ' + r.stat.kinds + '/2');
+        if (!r.stat.lex.d) sNeed.push('말 바꿈 없음');
+        if (sNeed.length) drop += '  「이 칸에서 한 일」이 모자랍니다 — ' + sNeed.join(' · ') + '.';
+      }
       if (r.empty.length) {
         w.className = 'pv-warn';
         w.innerHTML = (kind === 'report' ? '아직 비어 있거나 모자란 곳' : '아직 비어 있는 칸')
-          + ' — ' + r.empty.join(', ') + '.  닫고 채운 뒤 다시 눌러 보세요.';
+          + ' — ' + r.empty.join(', ') + '.  닫고 채운 뒤 다시 눌러 보세요.' + drop;
+      } else if (sNeed.length) {
+        w.className = 'pv-warn';
+        w.innerHTML = '칸은 모두 채웠습니다.' + drop;
       } else {
         w.className = 'pv-warn ok';
-        w.innerHTML = '빈 곳 없이 모두 채워져 있습니다. 이대로 PDF로 저장해 제출하면 됩니다.';
+        w.innerHTML = '빈 곳 없이 모두 채워져 있습니다. 이대로 PDF로 저장해 제출하면 됩니다.' + drop;
       }
     }
     pvWrap.classList.add('open');
@@ -838,7 +1000,7 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       if (data.__pics) pics = data.__pics;
     }
     fields.forEach(grow);
-    renderPic('1'); renderPic('2'); syncMarks();
+    renderPic('1'); renderPic('2'); syncMarks(); paintWall(); paintDone(); paintKind();
     stamp(data ? '저장된 내용을 불러왔습니다' : '자동 저장 켜짐');
   }
 
@@ -882,6 +1044,7 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
       fields.forEach(function(el){
         if (el.type === 'checkbox') el.checked = false; else el.value = '';
         grow(el);
+        paintDone(); paintKind();
       });
       pics = { '1': { type: 'none' }, '2': { type: 'none' } };
       renderPic('1'); renderPic('2'); syncMarks();
