@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>알기 쉬운 언어 설계 프로젝트 · 3차시</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
@@ -190,6 +189,8 @@ input.auto{background:var(--paper)!important;color:var(--ink-soft);font-style:no
 .doneb label.on{color:var(--accent);font-weight:700}
 .doneb .dsep{display:block;height:1px;background:var(--line);margin:4px 2px 4px 0}
 .doneb label.lx span{opacity:.82}
+.doneb label.kp span{opacity:.82}
+.doneb label.kp.on{color:#8a6d1f}
 .kindsel{font-size:12.5px;padding:5px 4px}
 .kindwarn{margin:7px 0 0;font-size:12.5px;font-weight:700;color:#a4442f}
 .kindwarn.ok{color:var(--accent)}
@@ -394,9 +395,10 @@ tr.opt td.rown{color:var(--ink-soft)}
     </div>
 
     <p class="hint">원자료의 문장 번호에 맞추어 칸이 나뉘어 있습니다. <b>한 문장을 두세 문장으로 나누어 썼다면 그 칸 안에 모두 쓰세요.</b> 소제목 칸은 내용을 묶어 주는 자리입니다.<br>칸을 고쳐 쓴 뒤 <b>오른쪽 「이 칸에서 한 일」</b>에 표시하세요. <b>표시한 것이 그 칸의 글에 실제로 드러나야 합니다.</b> 거의 그대로 둔 칸은 표시하지 않아도 됩니다.</p>
-    <div class="rules"><strong>「이 칸에서 한 일」 — 네 가지가 무엇을 뜻하는지</strong><ul><li><b>문장 나눔</b> — 한 문장에 내용이 둘 이상이면 두세 문장으로 가른다. <span class="tiny">(1차시 ‘한 문장에 서술어 하나’)</span></li><li><b>피동→능동</b> — ‘실시됩니다’처럼 누가 하는지 숨은 말을 ‘학교가 실시합니다’로 되돌린다. <span class="tiny">(2차시 ① ‘누가 하는지도 넣습니다’)</span></li><li><b>명사→동사</b> — ‘제출이 요구됩니다’처럼 동작을 명사로 굳힌 말을 ‘내야 합니다’로 푼다. <span class="tiny">(2차시 ① 명사에 갇힌 동작)</span></li><li><b>말 바꿈</b> — 어려운 말을 쉬운 말로 갈아 끼운다. <span class="tiny">(2차시 ② 바꿀 말)</span></li></ul>
-      <p style="margin:8px 0 0;font-size:12.5px;color:var(--ink-soft)">※ 꼭 필요한 용어는 바꾸지 말고 그대로 두세요. 그 풀이는 <b>다음 시간 단어 사전</b>에서 씁니다. (2차시 ③ 남길 말 — 여기서 표시하는 항목은 아닙니다.)</p></div>
-    <p class="hint"><b>갖춰야 할 것</b> — 윗줄 세 가지(문장)를 표시한 칸이 <b>세 곳 이상</b>이고 그 안에 <b>서로 다른 두 가지 이상</b>, 그리고 아랫줄 <b>말 바꿈이 한 곳 이상</b>. 표 위에 지금 상태가 뜹니다.<br>내 독자에게 필요 없다고 판단해 <b>뺀 칸</b>이 있으면 그 칸에 <b>「뺌 — 왜 뺐는지」</b>라고 적으세요. 그냥 비워 두면 누락으로 봅니다. 다만 <b>꼭 알아야 할 정보가 든 칸은 뺄 수 없습니다.</b></p>
+    <div class="rules"><strong>「이 칸에서 한 일」 — 무엇을 뜻하는지</strong><ul><li><b>문장 나눔</b> — 한 문장에 내용이 둘 이상이면 두세 문장으로 가른다. <span class="tiny">(1차시 ‘한 문장에 서술어 하나’)</span></li><li><b>피동→능동</b> — ‘실시됩니다’처럼 누가 하는지 숨은 말을 ‘학교가 실시합니다’로 되돌린다. <span class="tiny">(2차시 ① ‘누가 하는지도 넣습니다’)</span></li><li><b>명사→동사</b> — ‘제출이 요구됩니다’처럼 동작을 명사로 굳힌 말을 ‘내야 합니다’로 푼다. <span class="tiny">(2차시 ① 명사에 갇힌 동작)</span></li><li><b>말 바꿈</b> — 어려운 말을 쉬운 말로 갈아 끼운다. <span class="tiny">(2차시 ② 바꿀 말)</span></li></ul>
+      <li><b>그대로 둠</b> — 고칠 필요가 없다고 판단해 원문 그대로 두었다. <span class="tiny">(인사말, 이미 쉬운 문장 등)</span></li><p style="margin:8px 0 0;font-size:12.5px;color:var(--ink-soft)">※ 꼭 필요한 용어는 바꾸지 말고 그대로 두세요. 그 풀이는 <b>다음 시간 단어 사전</b>에서 씁니다. (2차시 ③ 남길 말 — 여기서 표시하는 항목은 아닙니다.)</p></div>
+    <p class="hint"><b>갖춰야 할 것</b> — 윗줄 세 가지(문장)를 표시한 칸이 <b>세 곳 이상</b>이고 그 안에 <b>서로 다른 두 가지 이상</b>, 그리고 <b>말 바꿈이 한 곳 이상</b>. 표 위에 지금 상태가 뜹니다.<br>
+      고칠 필요가 없다고 판단한 칸은 <b>「그대로 둠」</b>을 누르세요. 아무것도 표시하지 않은 칸은 <b>빠뜨린 것</b>으로 봅니다. 「그대로 둠」은 다른 표시와 함께 누를 수 없습니다.<br>내 독자에게 필요 없다고 판단해 <b>뺀 칸</b>이 있으면 그 칸에 <b>「뺌 — 왜 뺐는지」</b>라고 적으세요. 그냥 비워 두면 누락으로 봅니다. 다만 <b>꼭 알아야 할 정보가 든 칸은 뺄 수 없습니다.</b></p>
 
     <div class="illbar noprint">
       <span class="lab">삽화 자리 표시</span>
@@ -410,18 +412,18 @@ tr.opt td.rown{color:var(--ink-soft)}
       <table class="rev">
         <colgroup><col style="width:72px"><col><col style="width:168px"></colgroup>
         <tr><th>원자료</th><th class="wide">내가 고쳐 쓴 글</th><th class="done">이 칸에서 한 일<br><span style="font-weight:400;font-size:11px">(해당하는 것 모두)</span></th></tr>
-        <tr><th>①</th><td><textarea class="rev-in" id="rv1" data-label="①번 칸" rows="2" placeholder="원자료 ①번 문장을 내 독자가 읽을 수 있게 고쳐 씁니다."></textarea></td><td class="done"><div class="doneb"><label for="t1a"><input type="checkbox" id="t1a"><span>문장 나눔</span></label><label for="t1b"><input type="checkbox" id="t1b"><span>피동→능동</span></label><label for="t1c"><input type="checkbox" id="t1c"><span>명사→동사</span></label><span class="dsep"></span><label for="t1d" class="lx"><input type="checkbox" id="t1d"><span>말 바꿈</span></label></div></td></tr>
-        <tr><th>②</th><td><textarea class="rev-in" id="rv2" data-label="②번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t2a"><input type="checkbox" id="t2a"><span>문장 나눔</span></label><label for="t2b"><input type="checkbox" id="t2b"><span>피동→능동</span></label><label for="t2c"><input type="checkbox" id="t2c"><span>명사→동사</span></label><span class="dsep"></span><label for="t2d" class="lx"><input type="checkbox" id="t2d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>①</th><td><textarea class="rev-in" id="rv1" data-label="①번 칸" rows="2" placeholder="원자료 ①번 문장을 내 독자가 읽을 수 있게 고쳐 씁니다."></textarea></td><td class="done"><div class="doneb"><label for="t1a"><input type="checkbox" id="t1a"><span>문장 나눔</span></label><label for="t1b"><input type="checkbox" id="t1b"><span>피동→능동</span></label><label for="t1c"><input type="checkbox" id="t1c"><span>명사→동사</span></label><span class="dsep"></span><label for="t1d" class="lx"><input type="checkbox" id="t1d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t1f" class="kp"><input type="checkbox" id="t1f"><span>그대로 둠</span></label></div></td></tr>
+        <tr><th>②</th><td><textarea class="rev-in" id="rv2" data-label="②번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t2a"><input type="checkbox" id="t2a"><span>문장 나눔</span></label><label for="t2b"><input type="checkbox" id="t2b"><span>피동→능동</span></label><label for="t2c"><input type="checkbox" id="t2c"><span>명사→동사</span></label><span class="dsep"></span><label for="t2d" class="lx"><input type="checkbox" id="t2d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t2f" class="kp"><input type="checkbox" id="t2f"><span>그대로 둠</span></label></div></td></tr>
         <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh1" data-label="소제목 1" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
-        <tr><th>③</th><td><textarea class="rev-in" id="rv3" data-label="③번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t3a"><input type="checkbox" id="t3a"><span>문장 나눔</span></label><label for="t3b"><input type="checkbox" id="t3b"><span>피동→능동</span></label><label for="t3c"><input type="checkbox" id="t3c"><span>명사→동사</span></label><span class="dsep"></span><label for="t3d" class="lx"><input type="checkbox" id="t3d"><span>말 바꿈</span></label></div></td></tr>
-        <tr><th>④</th><td><textarea class="rev-in" id="rv4" data-label="④번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t4a"><input type="checkbox" id="t4a"><span>문장 나눔</span></label><label for="t4b"><input type="checkbox" id="t4b"><span>피동→능동</span></label><label for="t4c"><input type="checkbox" id="t4c"><span>명사→동사</span></label><span class="dsep"></span><label for="t4d" class="lx"><input type="checkbox" id="t4d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>③</th><td><textarea class="rev-in" id="rv3" data-label="③번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t3a"><input type="checkbox" id="t3a"><span>문장 나눔</span></label><label for="t3b"><input type="checkbox" id="t3b"><span>피동→능동</span></label><label for="t3c"><input type="checkbox" id="t3c"><span>명사→동사</span></label><span class="dsep"></span><label for="t3d" class="lx"><input type="checkbox" id="t3d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t3f" class="kp"><input type="checkbox" id="t3f"><span>그대로 둠</span></label></div></td></tr>
+        <tr><th>④</th><td><textarea class="rev-in" id="rv4" data-label="④번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t4a"><input type="checkbox" id="t4a"><span>문장 나눔</span></label><label for="t4b"><input type="checkbox" id="t4b"><span>피동→능동</span></label><label for="t4c"><input type="checkbox" id="t4c"><span>명사→동사</span></label><span class="dsep"></span><label for="t4d" class="lx"><input type="checkbox" id="t4d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t4f" class="kp"><input type="checkbox" id="t4f"><span>그대로 둠</span></label></div></td></tr>
         <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh2" data-label="소제목 2" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
-        <tr><th>⑤</th><td><textarea class="rev-in" id="rv5" data-label="⑤번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t5a"><input type="checkbox" id="t5a"><span>문장 나눔</span></label><label for="t5b"><input type="checkbox" id="t5b"><span>피동→능동</span></label><label for="t5c"><input type="checkbox" id="t5c"><span>명사→동사</span></label><span class="dsep"></span><label for="t5d" class="lx"><input type="checkbox" id="t5d"><span>말 바꿈</span></label></div></td></tr>
-        <tr><th>⑥</th><td><textarea class="rev-in" id="rv6" data-label="⑥번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t6a"><input type="checkbox" id="t6a"><span>문장 나눔</span></label><label for="t6b"><input type="checkbox" id="t6b"><span>피동→능동</span></label><label for="t6c"><input type="checkbox" id="t6c"><span>명사→동사</span></label><span class="dsep"></span><label for="t6d" class="lx"><input type="checkbox" id="t6d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>⑤</th><td><textarea class="rev-in" id="rv5" data-label="⑤번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t5a"><input type="checkbox" id="t5a"><span>문장 나눔</span></label><label for="t5b"><input type="checkbox" id="t5b"><span>피동→능동</span></label><label for="t5c"><input type="checkbox" id="t5c"><span>명사→동사</span></label><span class="dsep"></span><label for="t5d" class="lx"><input type="checkbox" id="t5d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t5f" class="kp"><input type="checkbox" id="t5f"><span>그대로 둠</span></label></div></td></tr>
+        <tr><th>⑥</th><td><textarea class="rev-in" id="rv6" data-label="⑥번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t6a"><input type="checkbox" id="t6a"><span>문장 나눔</span></label><label for="t6b"><input type="checkbox" id="t6b"><span>피동→능동</span></label><label for="t6c"><input type="checkbox" id="t6c"><span>명사→동사</span></label><span class="dsep"></span><label for="t6d" class="lx"><input type="checkbox" id="t6d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t6f" class="kp"><input type="checkbox" id="t6f"><span>그대로 둠</span></label></div></td></tr>
         <tr class="sec"><th>소제목</th><td><input type="text" class="rev-in" id="rh3" data-label="소제목 3" placeholder="여기부터 묶이는 내용의 소제목. 예) 언제까지 무엇을 내야 하나요"></td><td class="done" style="text-align:center;color:var(--line)">—</td></tr>
-        <tr><th>⑦</th><td><textarea class="rev-in" id="rv7" data-label="⑦번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t7a"><input type="checkbox" id="t7a"><span>문장 나눔</span></label><label for="t7b"><input type="checkbox" id="t7b"><span>피동→능동</span></label><label for="t7c"><input type="checkbox" id="t7c"><span>명사→동사</span></label><span class="dsep"></span><label for="t7d" class="lx"><input type="checkbox" id="t7d"><span>말 바꿈</span></label></div></td></tr>
-        <tr><th>⑧</th><td><textarea class="rev-in" id="rv8" data-label="⑧번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t8a"><input type="checkbox" id="t8a"><span>문장 나눔</span></label><label for="t8b"><input type="checkbox" id="t8b"><span>피동→능동</span></label><label for="t8c"><input type="checkbox" id="t8c"><span>명사→동사</span></label><span class="dsep"></span><label for="t8d" class="lx"><input type="checkbox" id="t8d"><span>말 바꿈</span></label></div></td></tr>
-        <tr><th>⑨</th><td><textarea class="rev-in" id="rv9" data-label="⑨번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t9a"><input type="checkbox" id="t9a"><span>문장 나눔</span></label><label for="t9b"><input type="checkbox" id="t9b"><span>피동→능동</span></label><label for="t9c"><input type="checkbox" id="t9c"><span>명사→동사</span></label><span class="dsep"></span><label for="t9d" class="lx"><input type="checkbox" id="t9d"><span>말 바꿈</span></label></div></td></tr>
+        <tr><th>⑦</th><td><textarea class="rev-in" id="rv7" data-label="⑦번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t7a"><input type="checkbox" id="t7a"><span>문장 나눔</span></label><label for="t7b"><input type="checkbox" id="t7b"><span>피동→능동</span></label><label for="t7c"><input type="checkbox" id="t7c"><span>명사→동사</span></label><span class="dsep"></span><label for="t7d" class="lx"><input type="checkbox" id="t7d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t7f" class="kp"><input type="checkbox" id="t7f"><span>그대로 둠</span></label></div></td></tr>
+        <tr><th>⑧</th><td><textarea class="rev-in" id="rv8" data-label="⑧번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t8a"><input type="checkbox" id="t8a"><span>문장 나눔</span></label><label for="t8b"><input type="checkbox" id="t8b"><span>피동→능동</span></label><label for="t8c"><input type="checkbox" id="t8c"><span>명사→동사</span></label><span class="dsep"></span><label for="t8d" class="lx"><input type="checkbox" id="t8d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t8f" class="kp"><input type="checkbox" id="t8f"><span>그대로 둠</span></label></div></td></tr>
+        <tr><th>⑨</th><td><textarea class="rev-in" id="rv9" data-label="⑨번 칸" rows="2"></textarea></td><td class="done"><div class="doneb"><label for="t9a"><input type="checkbox" id="t9a"><span>문장 나눔</span></label><label for="t9b"><input type="checkbox" id="t9b"><span>피동→능동</span></label><label for="t9c"><input type="checkbox" id="t9c"><span>명사→동사</span></label><span class="dsep"></span><label for="t9d" class="lx"><input type="checkbox" id="t9d"><span>말 바꿈</span></label><span class="dsep"></span><label for="t9f" class="kp"><input type="checkbox" id="t9f"><span>그대로 둠</span></label></div></td></tr>
       </table>
     </div>
   </section>
@@ -740,9 +742,9 @@ tr.opt td.rown{color:var(--ink-soft)}
 
   /* ── 「이 칸에서 한 일」 ── */
   var doneBoxes = Array.prototype.slice.call(document.querySelectorAll('.doneb input[type=checkbox]'));
-  var SENTK = ['a','b','c'], LEXK = ['d'], LEXNAME = {d:'말 바꿈'}, ALLK = ['a','b','c','d'];
+  var SENTK = ['a','b','c'], LEXK = ['d'], LEXNAME = {d:'말 바꿈'}, ALLK = ['a','b','c','d'], KEEPK = 'f';
   function doneStat(){
-    var n = 0, sent = 0, kinds = [], lex = {};
+    var n = 0, sent = 0, keep = 0, kinds = [], lex = {};
     for (var i = 1; i <= 9; i++) {
       var any = false, isSent = false;
       ALLK.forEach(function(k){
@@ -752,10 +754,12 @@ tr.opt td.rown{color:var(--ink-soft)}
         if (SENTK.indexOf(k) !== -1) { isSent = true; if (kinds.indexOf(k) === -1) kinds.push(k); }
         else lex[k] = (lex[k] || 0) + 1;
       });
+      var kp = document.getElementById('t' + i + KEEPK);
+      if (kp && kp.checked) { keep++; any = true; }
       if (any) n++;
       if (isSent) sent++;
     }
-    return { rows: n, sent: sent, kinds: kinds.length, lex: lex };
+    return { rows: n, sent: sent, keep: keep, kinds: kinds.length, lex: lex };
   }
   function doneRows(){ return doneStat().rows; }
   function paintDone(){
@@ -771,10 +775,21 @@ tr.opt td.rown{color:var(--ink-soft)}
       LEXK.forEach(function(k){ if (!d.lex[k]) need.push(LEXNAME[k] + ' 없음'); });
       if (d.rows === 0) { st.textContent = '아직 표시한 칸이 없습니다. 고쳐 쓴 칸마다 한 일을 표시하세요.'; st.className = 'st'; }
       else if (need.length) { st.textContent = '아직 모자랍니다 — ' + need.join(' · ') + '. (문장 칸 3곳 · 서로 다른 종류 2가지 · 말 바꿈 1곳)'; st.className = 'st'; }
-      else { st.textContent = '문장 칸 ' + d.sent + '곳 · 서로 다른 ' + d.kinds + '가지 · 말 바꿈 ✓ — 모두 갖췄습니다.'; st.className = 'st ok'; }
+      else { st.textContent = '문장 칸 ' + d.sent + '곳 · 서로 다른 ' + d.kinds + '가지 · 말 바꿈 ✓' + (d.keep ? ' · 그대로 둔 칸 ' + d.keep + '곳' : '') + ' — 모두 갖췄습니다.'; st.className = 'st ok'; }
     }
   }
-  doneBoxes.forEach(function(el){ el.addEventListener('change', paintDone); });
+  doneBoxes.forEach(function(el){
+    el.addEventListener('change', function(){
+      var m = /^t(\d)([a-f])$/.exec(el.id);
+      if (m && el.checked) {
+        var row = m[1], k = m[2];
+        if (k === KEEPK) ALLK.forEach(function(x){ var o = document.getElementById('t' + row + x); if (o) o.checked = false; });
+        else { var kp = document.getElementById('t' + row + KEEPK); if (kp) kp.checked = false; }
+        save();
+      }
+      paintDone();
+    });
+  });
 
   /* ── 문장 설계: 두 행이 같은 종류인지 ── */
   function kindVals(){
@@ -930,6 +945,11 @@ tr.opt td.rown{color:var(--ink-soft)}
 
     var rf = val('reflect');
     if (rf) out += '<div class="rp-h">성찰 — 좋은 글의 기준은 무엇에 따라 달라지는가</div><p class="nt-p">' + esc(rf) + '</p>';
+    for (var ri = 1; ri <= 2; ri++) {
+      var rk = val('rf' + ri + 'k'), rt = val('rf' + ri + 't');
+      if (rk || rt) out += '<div class="rp-row"><span class="rp-badge alt">' + esc(rk || '과제를 하며') + '</span>'
+        + '<div class="rp-v">' + (esc(rt) || '—') + '</div></div>';
+    }
 
     return { html: out, empty: empty };
   }
@@ -1065,5 +1085,3 @@ tr.opt td.rown{color:var(--ink-soft)}
   load();
 })();
 </script>
-
-</body></html>
