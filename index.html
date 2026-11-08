@@ -397,7 +397,7 @@ tr.opt td.rown{color:var(--ink-soft)}
     <p class="hint">원자료의 문장 번호에 맞추어 칸이 나뉘어 있습니다. <b>한 문장을 두세 문장으로 나누어 썼다면 그 칸 안에 모두 쓰세요.</b> 소제목 칸은 내용을 묶어 주는 자리입니다.<br>칸을 고쳐 쓴 뒤 <b>오른쪽 「이 칸에서 한 일」</b>에 표시하세요. <b>표시한 것이 그 칸의 글에 실제로 드러나야 합니다.</b> 거의 그대로 둔 칸은 표시하지 않아도 됩니다.</p>
     <div class="rules"><strong>「이 칸에서 한 일」 — 무엇을 뜻하는지</strong><ul><li><b>문장 나눔</b> — 한 문장에 내용이 둘 이상이면 두세 문장으로 가른다. <span class="tiny">(1차시 ‘한 문장에 서술어 하나’)</span></li><li><b>피동→능동</b> — ‘실시됩니다’처럼 누가 하는지 숨은 말을 ‘학교가 실시합니다’로 되돌린다. <span class="tiny">(2차시 ① ‘누가 하는지도 넣습니다’)</span></li><li><b>명사→동사</b> — ‘제출이 요구됩니다’처럼 동작을 명사로 굳힌 말을 ‘내야 합니다’로 푼다. <span class="tiny">(2차시 ① 명사에 갇힌 동작)</span></li><li><b>말 바꿈</b> — 어려운 말을 쉬운 말로 갈아 끼운다. <span class="tiny">(2차시 ② 바꿀 말)</span></li></ul>
       <li><b>그대로 둠</b> — 고칠 필요가 없다고 판단해 원문 그대로 두었다. <span class="tiny">(인사말, 이미 쉬운 문장 등)</span></li><p style="margin:8px 0 0;font-size:12.5px;color:var(--ink-soft)">※ 꼭 필요한 용어는 바꾸지 말고 그대로 두세요. 그 풀이는 <b>다음 시간 단어 사전</b>에서 씁니다. (2차시 ③ 남길 말 — 여기서 표시하는 항목은 아닙니다.)</p></div>
-    <p class="hint"><b>갖춰야 할 것</b> — 윗줄 세 가지(문장)를 표시한 칸이 <b>세 곳 이상</b>이고 그 안에 <b>서로 다른 두 가지 이상</b>, 그리고 <b>말 바꿈이 한 곳 이상</b>. 표 위에 지금 상태가 뜹니다.<br>
+    <p class="hint"><b>갖춰야 할 것</b> — 윗줄 세 가지(문장)를 표시한 칸이 <b>세 곳 이상</b>이고 그 안에 <b>서로 다른 두 가지 이상</b>, 그리고 <b>말 바꿈이 두 곳 이상</b>. 표 위에 지금 상태가 뜹니다.<br>말 바꿈이 두 곳인 까닭은, 다음 시간 <b>어휘 설계표 두 행</b>을 그 두 곳에서 가져오기 때문입니다.<br>
       고칠 필요가 없다고 판단한 칸은 <b>「그대로 둠」</b>을 누르세요. 아무것도 표시하지 않은 칸은 <b>빠뜨린 것</b>으로 봅니다. 「그대로 둠」은 다른 표시와 함께 누를 수 없습니다.<br>내 독자에게 필요 없다고 판단해 <b>뺀 칸</b>이 있으면 그 칸에 <b>「뺌 — 왜 뺐는지」</b>라고 적으세요. 그냥 비워 두면 누락으로 봅니다. 다만 <b>꼭 알아야 할 정보가 든 칸은 뺄 수 없습니다.</b></p>
 
     <div class="illbar noprint">
@@ -772,10 +772,10 @@ tr.opt td.rown{color:var(--ink-soft)}
       var d = doneStat(), need = [];
       if (d.sent < 3) need.push('문장 칸 ' + d.sent + '/3');
       if (d.kinds < 2) need.push('문장 종류 ' + d.kinds + '/2');
-      LEXK.forEach(function(k){ if (!d.lex[k]) need.push(LEXNAME[k] + ' 없음'); });
+      LEXK.forEach(function(k){ var n = d.lex[k] || 0; if (n < 2) need.push(LEXNAME[k] + ' ' + n + '/2'); });
       if (d.rows === 0) { st.textContent = '아직 표시한 칸이 없습니다. 고쳐 쓴 칸마다 한 일을 표시하세요.'; st.className = 'st'; }
-      else if (need.length) { st.textContent = '아직 모자랍니다 — ' + need.join(' · ') + '. (문장 칸 3곳 · 서로 다른 종류 2가지 · 말 바꿈 1곳)'; st.className = 'st'; }
-      else { st.textContent = '문장 칸 ' + d.sent + '곳 · 서로 다른 ' + d.kinds + '가지 · 말 바꿈 ✓' + (d.keep ? ' · 그대로 둔 칸 ' + d.keep + '곳' : '') + ' — 모두 갖췄습니다.'; st.className = 'st ok'; }
+      else if (need.length) { st.textContent = '아직 모자랍니다 — ' + need.join(' · ') + '. (문장 칸 3곳 · 서로 다른 종류 2가지 · 말 바꿈 2곳)'; st.className = 'st'; }
+      else { st.textContent = '문장 칸 ' + d.sent + '곳 · 서로 다른 ' + d.kinds + '가지 · 말 바꿈 ' + (d.lex.d || 0) + '곳' + (d.keep ? ' · 그대로 둔 칸 ' + d.keep + '곳' : '') + ' — 모두 갖췄습니다.'; st.className = 'st ok'; }
     }
   }
   doneBoxes.forEach(function(el){
@@ -969,7 +969,7 @@ tr.opt td.rown{color:var(--ink-soft)}
       if (r.stat) {
         if (r.stat.sent < 3) sNeed.push('문장 칸 ' + r.stat.sent + '/3');
         if (r.stat.kinds < 2) sNeed.push('문장 종류 ' + r.stat.kinds + '/2');
-        if (!r.stat.lex.d) sNeed.push('말 바꿈 없음');
+        if ((r.stat.lex.d || 0) < 2) sNeed.push('말 바꿈 ' + (r.stat.lex.d || 0) + '/2곳');
         if (sNeed.length) drop += '  「이 칸에서 한 일」이 모자랍니다 — ' + sNeed.join(' · ') + '.';
       }
       if (r.empty.length) {
